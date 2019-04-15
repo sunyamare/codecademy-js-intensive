@@ -9,11 +9,27 @@ const storyWords = story.split(' ');
 // console.log(storyWords);
 
 // log the number of words in the array
-console.log(storyWords.length);
+console.log('The amount of words in the story is ' + storyWords.length);
 
 // filter out words that are part of unnecessaryWords
 const betterWords = storyWords.filter(element => {
   return (unnecessaryWords.includes(element)) ? false : element;
 });
+
+// find how many times betterWords contains any of the overusedWords
+const overusedWordsCounter = betterWords.filter(element => {
+  return (overusedWords.includes(element)) ? element : false;
+});
+const overusedWordsCount = overusedWordsCounter.length;
 console.log('')
-console.log('betterWords = ' + betterWords);
+console.log('The instance count of overused words is ' + overusedWordsCount);
+
+// find the amount of sentences in the story
+const storySentencesDot = story.split('.');
+const storySentencesExcl = story.split('!');
+const storySentences = storySentencesExcl.length + storySentencesDot.length;
+console.log('')
+console.log('The amount of sentences in the story is ' + storySentences);
+
+console.log('')
+console.log('A suggestion for an improved story with '  + betterWords.length + ' words: ' + betterWords.join(' '));
