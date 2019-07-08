@@ -24,3 +24,4 @@ console.log(howOld(28, 2000))
 console.log(howOld(28, 'what'))
 console.log(howOld('', 23))
 // we can see that not all cases are caught ...
+
