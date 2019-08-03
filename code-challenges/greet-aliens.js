@@ -5,7 +5,7 @@ The greeting should take the following format:
 
 const aliens = ["Blorgous", "Glamyx", "Wegord", "SpaceKing"];
 
-greetAliens(aliens);
+// greetAliens(aliens);
 // Should print:
 // Oh powerful Blorgous, we humans offer our unconditional surrender! 
 // Oh powerful Glamyx, we humans offer our unconditional surrender! 
@@ -14,18 +14,10 @@ greetAliens(aliens);
 
 /* Note: You may have noticed how convenient it would be to use .forEach(), but you’re not allowed to use it here. Don’t worry you’ll have plenty of opportunities to use built-in methods later on! */
 
+const greetAliens = array => {
+    for (let i = 0; i < array.length; i++) {
+        console.log(`Oh powerful ${array[i]}, we humans offer our unconditional surrender!`);
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Hint: for (let i = 0; i < arr.length; i++) */
+greetAliens(aliens);
